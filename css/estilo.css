@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---header---*/
+.header {
+    background-color: rgb(158, 66, 66);
+    height: 100px;
+    padding: 20px;
+}
+
+.header img {
+    padding: 0.2rem;
+    width: 8%;
+    position: absolute;
+    top: 0%;
+}
+
+.h1 {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    top: 40px;
+    left: 110px;
+}
+
+.header__navbar ul {
+    padding: 1rem;
+    list-style: none;
+    text-align: right;
+}
+
+.header__navbar li {
+    display: inline;
+}
+
+.header__navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header__abajo {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/*------Contenido-----*/
+.contenido {
+    background-color: rgb(249, 240, 120);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(65, 64, 64);
+    line-height: 3rem;
+    text-align: center;
+
+}
+
+.contenido h2 {
+    font-weight: bold;
+    font-size: 4.5rem;
+    padding: 2rem;
+}
+
+.contenido h3 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.contenido__servicios a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-style: outset;
+    border-color: grey;
+    border-width: 5px;
+    background-color: rgb(158, 66, 66);
+    text-align: center;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 30%;
+}
+
+.contenido__imagenes img {
+    border: 1px solid;
+    width: 30%;
+    display: inline-block;
+}
+
+/*-----Footer-----*/
+.footer {
+    background-color: grey;
+    height: 10rem;
+}
+
+.footer__navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+}
+
+.footer__arriba {
+    margin-top: 10px;
+    padding-left: 1rem;
+}
+
+.footer__arriba a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+}
+
+.footer form {
+    box-sizing: border-box;
+    border: none;
+    float: right;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: auto;
+    width: fit-content
+}
+
+.footer__consultas legend {
+    padding-right: 25rem;
+}
+
+.footer__consultas textarea {
+    margin: 4px 2px;
+    width: 82%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    border-radius: 4px;
+    resize: none;
+}
+
+.footer__consultas input [type=button],
+input[type=submit],
+[type=reset] {
+    margin: 4px 2px;
+    padding: 8px 16px;
+    width: 40%;
+    cursor: pointer;
+}
