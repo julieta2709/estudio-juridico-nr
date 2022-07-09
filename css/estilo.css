@@ -1,157 +1,722 @@
+/*CSS GENERAL*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*---header---*/
+.container {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 35% 35% 10%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        "contenido contenido contenido"
+        "servicios servicios servicios"
+        "footer footer footer";
+    background-color: rgb(243, 186, 101);
+    border: 1px solid #fff;
+    justify-content: space-evenly;
+    align-content: stretch;
+    justify-items: stretch;
+}
+
 .header {
-    background-color: rgb(158, 66, 66);
-    height: 100px;
-    padding: 20px;
+    grid-area: header;
 }
 
-.header img {
-    padding: 0.2rem;
-    width: 8%;
-    position: absolute;
-    top: 0%;
+.footer {
+    grid-area: footer;
+    margin-top: 50px;
+    height: 100%;
 }
 
-.h1 {
+img {
+    width: 100%;
+}
+
+/*---header---*/
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+    margin-top: 10px;
+    grid-area: h1;
+    margin-left: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-areas:
+        "header_logo header_menu"
+        "header_logo h1"
+        "header_logo header_abajo";
+    align-items: center;
+    justify-items: start;
+    align-content: stretch;
+    background-color: rgb(190, 71, 71);
+    justify-content: start;
+}
+
+.header__logo {
+    grid-area: header_logo;
+    width: 300px;
+}
+
+.header_menu {
+    grid-area: header_menu;
+    display: flex;
+    gap: 2rem;
+    font-size: 25px;
+    padding: 1rem;
+    border: 1px solid rgb(190, 71, 71);
+}
+
+.header_abajo {
+    grid-area: header_abajo;
+}
+
+/*Fin header*/
+
+/* CONTENIDO */
+
+h2 {
+    color: rgb(89, 88, 88);
+    font-size: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
     font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+h3 {
+    color: rgb(89, 88, 88);
+    font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    padding: 1rem;
-    position: absolute;
-    top: 40px;
-    left: 110px;
+    text-align: center;
 }
 
-.header__navbar ul {
-    padding: 1rem;
-    list-style: none;
-    text-align: right;
-}
-
-.header__navbar li {
-    display: inline;
-}
-
-.header__navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    font-size: 0.7rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.header__abajo {
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    font-size: 0.7rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-/*------Contenido-----*/
 .contenido {
-    background-color: rgb(249, 240, 120);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(65, 64, 64);
-    line-height: 3rem;
-    text-align: center;
-
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding-left: 50px;
+    justify-content: center;
 }
 
-.contenido h2 {
-    font-weight: bold;
-    font-size: 4.5rem;
-    padding: 2rem;
+.servicios {
+    grid-area: servicios;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-around;
 }
 
-.contenido h3 {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
+.servicios_menu {
+    display: flex;
+    font-size: 50px;
+    border: #fff;
+    padding: 1rem;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-content: center;
 }
 
-.contenido__servicios a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    border-style: outset;
-    border-color: grey;
-    border-width: 5px;
-    background-color: rgb(158, 66, 66);
-    text-align: center;
-    padding-bottom: 5px;
-    display: inline-block;
-    width: 30%;
+.servicios_link {
+    padding: 1rem;
+    align-items: center;
+    background-color: rgb(190, 71, 71);
+    margin-left: 80px;
 }
 
-.contenido__imagenes img {
-    border: 1px solid;
-    width: 30%;
-    display: inline-block;
+.servicios_img {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    width: 600px;
+    margin: auto;
+    padding-left: 140px;
 }
+
+/*-fin Contenido-----*/
 
 /*-----Footer-----*/
-.footer {
+
+footer {
+    display: flex;
     background-color: grey;
-    height: 10rem;
+    padding: 0.5rem;
+    margin: auto;
+    gap: 2rem;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.footer__navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 2rem;
+.footer_menu {
+    display: flex;
+    padding: 20px;
+    font-size: 25px;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+legend {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.7rem;
+    font-size: x-large;
+    color: rgb(255, 254, 254);
+    text-align: center;
 }
 
-.footer__arriba {
-    margin-top: 10px;
-    padding-left: 1rem;
+.footer_form {
+    display: flex;
+    flex-direction: column;
+
 }
 
-.footer__arriba a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.7rem;
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 700px;
+    align-items: center;
+
+}
+
+input {
+    background-color: rgb(190, 71, 71);
+    border: solid 1px rgb(190, 71, 71);
+    color: #fff;
+    width: 200px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 50px;
+    margin: 8px 0;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* CSS SERVICIOS HTML */
+
+.nuestros_servicios {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.contenido_ns {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ns_subti {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+}
+
+.ns_texto {
+    font-size: 20px;
+    background-color: rgb(235, 235, 172);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 1rem;
+    border: solid 1px currentColor;
 }
 
-.footer form {
-    box-sizing: border-box;
-    border: none;
-    float: right;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: auto;
-    width: fit-content
+/* Vista mobile */
+
+@media only screen and (max-width: 767px) {
+
+    .container {
+        grid-template-rows: 10% 20% 40% 30%;
+        grid-template-columns: 15% 35% 50%;
+        height: auto;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    header {
+        grid-column: 10% 90%;
+    }
+
+    h1 {
+        font-size: small;
+        margin-left: 1px;
+        margin-bottom: 2px;
+    }
+
+    .header__logo {
+        width: 60px;
+        margin-top: 10px;
+        margin-left: 1px;
+    }
+
+    .header_menu {
+        font-size: 6px;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .header_abajo {
+        font-size: 6px;
+        padding-left: 5px;
+    }
+
+    .contenido {
+        padding: 0;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 20px;
+
+    }
+
+    .servicios {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .servicios_menu {
+        font-size: 15px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .servicios_link {
+        padding: 1rem;
+        margin-left: 10px;
+    }
+
+    img {
+        height: auto;
+    }
+
+    .servicios_img {
+        gap: 1.5rem;
+        width: 40%;
+        padding: 0;
+    }
+
+    .footer {
+        width: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 0;
+        margin-left: 1px;
+        height: auto;
+    }
+
+    .footer_menu {
+        font-size: xx-small;
+        padding: 0;
+        gap: 0.5rem;
+    }
+
+    fieldset {
+        width: auto;
+        height: auto;
+    }
+
+    legend {
+        font-size: xx-small;
+    }
+
+    input {
+        width: auto;
+        font-size: xx-small;
+    }
+
+    textarea {
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer__arriba {
+        font-size: xx-small;
+    }
+
+    /* vista mobile servicios html  */
+
+    .nuestros_servicios {
+        margin-top: 50px;
+        font-size: 20px;
+        height: auto;
+    }
+
+    .contenido_ns {
+        gap: 0.5rem;
+
+    }
+
+    .ns_subti {
+        font-size: 15px;
+    }
+
+    .ns_texto {
+        font-size: 5px;
+        width: 70%;
+        padding: 0.5rem;
+        margin: 5px;
+        margin-right: 1px;
+    }
+
+    /* vista mobile sobrenosotros html */
+    .sn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sn_titulo {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+    .sn_texto {
+        width: 90%;
+        padding: 0.5rem;
+        margin: 5px;
+        margin-right: 1px;
+        text-align: justify;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /* vista mobile informacionutil html */
+    /* vista mobile contacto html */
 }
 
-.footer__consultas legend {
-    padding-right: 25rem;
+/* Vista Tablet */
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+
+    .container {
+        grid-template-rows: 15% 20% 35% 30%;
+        grid-template-columns: 15% 35% 50%;
+        height: auto;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .header__logo {
+        width: 90px;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .header_menu {
+        font-size: medium;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .header_abajo {
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .contenido {
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 60px;
+        margin-top: 60px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .servicios {
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .servicios_menu {
+        font-size: 20px;
+        padding: 0;
+        text-align: center;
+
+    }
+
+    .servicios_link {
+        padding: 1rem;
+        margin-left: 10px;
+    }
+
+    .servicios_img {
+        gap: 2rem;
+        width: 20%;
+        padding: 0;
+    }
+
+    img {
+        height: auto;
+    }
+
+    .footer {
+        width: 100%;
+
+    }
+
+    footer {
+        padding: 0;
+        flex-direction: row;
+        height: auto;
+    }
+
+    .footer_menu {
+        font-size: small;
+        padding: 0;
+    }
+
+    fieldset {
+        width: auto;
+        height: auto;
+    }
+
+    legend {
+        font-size: small;
+    }
+
+    input {
+        width: auto;
+        font-size: x-small;
+    }
+
+    textarea {
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+
+    .footer__arriba {
+        font-size: small;
+    }
+
+    /* vista tablet servicios html */
+
+    .contenido_ns {
+        gap: 0.5rem;
+        margin-top: 50px;
+    }
+
+    .nuestros_servicios {
+        font-size: 30px;
+    }
+
+    .ns_subti {
+        font-size: 15px;
+    }
+
+    .ns_texto {
+        font-size: 5px;
+        width: 90%;
+        padding: 0.5rem;
+        margin-right: 1px;
+    }
+
+    /* vista tablet sobrenosotros html */
+
+    .sn {
+        margin-top: 120px;
+    }
+
+    .sn_titulo {
+        font-size: 50px;
+    }
+
+    .ns_texto {
+        font-size: 50px;
+    }
+
+    /* vista tablet informacionutil html */
+    /* vista tablet contacto html */
 }
 
-.footer__consultas textarea {
-    margin: 4px 2px;
-    width: 82%;
-    height: 50px;
-    box-sizing: border-box;
-    padding: 16px 20px;
-    border-radius: 4px;
-    resize: none;
-}
+/* Vista desktop */
 
-.footer__consultas input [type=button],
-input[type=submit],
-[type=reset] {
-    margin: 4px 2px;
-    padding: 8px 16px;
-    width: 40%;
-    cursor: pointer;
+@media only screen and (min-width:1024px) and (max-width:1200px) {
+
+    .container {
+        grid-template-rows: 15% 20% 45% 20%;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: auto;
+        width: auto;
+    }
+
+    header {
+        width: auto;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    h1 {
+        font-size: xx-large;
+    }
+
+    .header__logo {
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-right: 110px;
+    }
+
+    .header_menu {
+        font-size: medium;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .header_abajo {
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .contenido {
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .servicios {
+        height: auto;
+        margin-top: 0;
+    }
+
+    .servicios_menu {
+        font-size: 20px;
+        padding: 0;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+
+    .servicios_link {
+        padding: 0.5rem;
+        margin-left: 20px;
+    }
+
+    .servicios_img {
+        gap: 2rem;
+        width: 20%;
+        padding: 0;
+
+    }
+
+    img {
+        height: auto;
+    }
+
+    .footer {
+        height: auto;
+        width: auto;
+
+    }
+
+    footer {
+        padding: 0;
+        flex-direction: row;
+    }
+
+    .footer_menu {
+        font-size: small;
+        padding: 0;
+    }
+
+    fieldset {
+        width: auto;
+        height: auto;
+    }
+
+    legend {
+        font-size: small;
+    }
+
+    input {
+        width: auto;
+        font-size: x-small;
+        padding: 1px;
+    }
+
+    textarea {
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+
+    .footer__arriba {
+        font-size: small;
+    }
+
+    /* Vista desktop servicios html */
+
+    .contenido_ns {
+        gap: 0.5rem;
+    }
+
+    .nuestros_servicios {
+        font-size: 40px;
+    }
+
+    .ns_subti {
+        font-size: 20px;
+    }
+
+    .ns_texto {
+        font-size: 12px;
+        width: 100%;
+        padding: 0.5rem;
+        margin-right: 1px;
+    }
 }

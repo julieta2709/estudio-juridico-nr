@@ -12,65 +12,66 @@
 
 <body>
     <!--FILA DE LOGO + NAV-->
-    <header class="header" id="arriba">
-        <nav class="header__navbar">
-            <ul>
-                <li> <a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/servicios.html">Servicios</a></li>
-                <li> <a href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
-                <li><a href="../pages/informacionutil.html">Información útil</a></li>
-            </ul>
-        </nav>
-        <img src="../assets/img/logonr.png" alt="logonr">
-        <H1 class="h1">
-            ESTUDIO JURÍDICO PREVISIONAL
-        </H1>
+    <div class="container">
+        <div class="header">
+            <header>
+                <img class="header__logo" src="../assets/img/logonr.png" alt="logonr">
 
-        <p><a href="#abajo" class="header__abajo">Ir abajo</a></p>
-    </header>
-    <!--INFORMACIÓN DE MI SITIO-->
-    <section class="contenido">
-        <article>
-            <H2>SERVICIOS</H2>
-            <ul>
-                <li>Derecho previsional</li>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum incidunt aperiam repellat aliquid
-                    exercitationem fuga doloribus autem ut cupiditate libero suscipit magnam repudiandae, maxime commodi
-                    aut veritatis, consectetur laborum modi.</p>
-                <li>Derecho laboral</li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veniam ipsa minima quasi recusandae
-                    magni tenetur rerum consectetur, nulla mollitia, esse eos, impedit tempore amet nihil earum vitae
-                    autem quis.</p>
-                <li>Derecho de familia</li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero rerum ex cupiditate ad earum quisquam
-                    delectus mollitia placeat optio dolores nisi ipsam asperiores praesentium quam repudiandae, minima
-                    veniam dolorum commodi.</p>
-            </ul>
-        </article>
-    </section>
-    <!--INICIO DE FOOTER-->
-    <footer class="footer" id="abajo">
-        <form class="footer__consultas" action="">
-            <fieldset>
-                <legend>Consultas</legend>
-                <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
-                <input type="submit" value="Enviá el formulario">
-                <input type="reset" value="Limpiar formulario">
-                <input type="button" value="">
-            </fieldset>
-        </form>
-        <nav class="footer__navbar">
-            <ul>
-                <li> <a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/servicios.html">Servicios</a></li>
-                <li> <a href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
-                <li><a href="../pages/informacionutil.html">Información útil</a></li>
-            </ul>
-        </nav>
-        <p class="footer__arriba"><a href="#arriba">Ir arriba</a></p>
-    </footer>
+                <nav class="header_navbar">
+                    <ul class="header_menu">
+                        <li> <a href="../index.html">Inicio</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li> <a href="./sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./informacionutil.html">Información útil</a></li>
+                    </ul>
+                </nav>
+                <H1>
+                    ESTUDIO JURÍDICO PREVISIONAL
+                </H1>
+                <p><a href="#abajo" class="header_abajo">Ir abajo</a></p>
+            </header>
+        </div>
+
+        <!--INFORMACIÓN DE MI SITIO-->
+        <section class="contenido">
+            <article class="contenido_ns">
+                <H2 class="nuestros_servicios">Nuestros Servicios</H2>
+                <h3 class="ns_subti">Derecho previsional</h3>
+                <p class="ns_texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et delectus modi odio laborum excepturi maxime non dolor at tenetur ratione possimus ab deleniti sequi, ullam, quasi dolores quidem pariatur!</p>
+                <h3 class="ns_subti">Derecho laboral</h3>
+                <p class="ns_texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio, neque aut quas cupiditate, iure recusandae sint eaque veritatis exercitationem ullam iste nisi ab assumenda accusantium odit iusto vel reprehenderit.</p>
+                <h3 class="ns_subti">Derecho de familia</h3>
+                <p class="ns_texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis ipsa hic aut ipsum similique consectetur quaerat nam laboriosam? Minus, earum doloribus quis esse omnis numquam sapiente natus sunt commodi.</p>
+
+            </article>
+        </section>
+        <!--INICIO DE FOOTER-->
+        <div class="footer">
+            <footer>
+                <nav class="footer_navbar">
+                    <ul class="footer_menu">
+                        <li> <a href="../index.html">Inicio</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li> <a href="./sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./informacionutil.html">Información útil</a></li>
+                    </ul>
+                </nav>
+                <div class="footer_form">
+                    <form action="">
+                        <fieldset>
+                            <legend>Consultas</legend>
+                            <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
+                            <input type="submit" value="Enviá el formulario">
+                        </fieldset>
+                    </form>
+                </div>
+
+                <p class="footer__arriba"><a href="#arriba">Ir arriba</a></p>
+            </footer>
+        </div>
+    </div>
 </body>
 
 </html>
