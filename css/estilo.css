@@ -5,718 +5,812 @@
     box-sizing: border-box;
 }
 
-.container {
-    display: grid;
-    grid-auto-flow: row dense;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% 35% 35% 10%;
-    gap: 0px 0px;
-    grid-template-areas:
-        "header header header"
-        "contenido contenido contenido"
-        "servicios servicios servicios"
-        "footer footer footer";
-    background-color: rgb(243, 186, 101);
-    border: 1px solid #fff;
-    justify-content: space-evenly;
-    align-content: stretch;
-    justify-items: stretch;
+/* HEADER */
+
+header {
+    display: flex;
+    background-color: rgb(193, 98, 98);
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
-.header {
-    grid-area: header;
+.header_logo {
+    width: 15%;
+    margin: 5px 0 5px 10px;
 }
 
-.footer {
-    grid-area: footer;
-    margin-top: 50px;
-    height: 100%;
+.contenedor_header {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 
-img {
-    width: 100%;
+.contenedor_header p {
+    text-align: end;
 }
 
-/*---header---*/
-
-ul {
-    list-style-type: none;
+.header_abajo {
+    list-style: none;
+    text-decoration: none;
+    font-size: x-small;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-a {
+.header_navbar {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.header_menuli {
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(255, 255, 255);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 1rem;
 }
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 90px;
-    margin-top: 10px;
-    grid-area: h1;
-    margin-left: 5px;
+    color: white;
+    text-align: left;
+    padding: 2rem;
+    font-size: 38px;
 }
 
-header {
-    display: grid;
-    grid-template-areas:
-        "header_logo header_menu"
-        "header_logo h1"
-        "header_logo header_abajo";
-    align-items: center;
-    justify-items: start;
-    align-content: stretch;
-    background-color: rgb(190, 71, 71);
-    justify-content: start;
+/* Vista mobile HEADER */
+
+@media only screen and (max-width:767px) {
+
+    .header_navbar {
+        width: 100%;
+        margin-right: 5px;
+
+    }
+
+    .header_menuli {
+        font-size: xx-small;
+        padding: 0.5rem;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: x-large;
+        padding: 1rem;
+    }
+
+    .header_abajo {
+        margin-right: 10px;
+    }
 }
 
-.header__logo {
-    grid-area: header_logo;
-    width: 300px;
+/* Vista Tablet HEADER */
+@media only screen and (min-width:768px) and (max-width:1239px) {
+    .header_navbar {
+        width: 100%;
+        margin-right: 5px;
+
+    }
+
+    .header_menuli {
+        font-size: small;
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: xx-large;
+        padding: 1rem;
+    }
+
+    .header_abajo {
+        margin-right: 10px;
+    }
 }
 
-.header_menu {
-    grid-area: header_menu;
+
+/* Vista Desktop HEADER */
+
+@media only screen and (min-width:1240px) {
+    .header_menuli {
+        font-size: large;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 45px;
+        padding: 2rem;
+    }
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(82, 82, 82);
     display: flex;
-    gap: 2rem;
-    font-size: 25px;
-    padding: 1rem;
-    border: 1px solid rgb(190, 71, 71);
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.header_abajo {
-    grid-area: header_abajo;
+.footer_navbar {
+    width: 20%;
 }
 
-/*Fin header*/
+.footer_menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 5px 0 5px 10px;
+}
 
-/* CONTENIDO */
-
-h2 {
-    color: rgb(89, 88, 88);
-    font-size: 150px;
+.footer_menuli {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-
+    font-size: small;
+    text-decoration: none;
+    color: white;
+    gap: 5px;
 }
 
-h3 {
-    color: rgb(89, 88, 88);
-    font-size: 50px;
+.footer_form {
+    margin: 5px 10px 5px 0px;
+    width: 70%;
+}
+
+.footer_fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_arriba {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    font-size: x-small;
+}
+
+legend {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: medium;
     text-align: center;
+}
+
+.footer_form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0 5px 0;
+}
+
+.footer_form input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(189, 189, 189);
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 50%;
+}
+
+.footer_form p {
+    text-align: end;
+}
+
+/* Vista mobile FOOTER */
+
+@media only screen and (max-width:767px) {
+    .footer_menuli {
+        font-size: xx-small;
+    }
+
+    .footer_form textarea {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0 5px 0;
+    }
+
+    legend {
+        font-size: small;
+    }
+}
+
+/* Vista Tablet Footer */
+@media only screen and (min-width:768px) and (max-width:1239px) {
+    .footer_menuli {
+        font-size: x-small;
+    }
+}
+
+/* Vista Desktop Footer */
+
+@media only screen and (min-width:1240px) {}
+
+/* MAIN INDEX HTML*/
+
+main {
+    background-color: rgb(251, 217, 95);
+}
+
+.mainindex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px auto;
+    grid-template-areas:
+        "contenido contenido"
+        "servicios servicios";
+    justify-items: center;
 }
 
 .contenido {
     grid-area: contenido;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    padding-left: 50px;
-    justify-content: center;
+}
+
+.contenido h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    font-size: 70px;
+    padding: 1rem;
+}
+
+.contenido h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    font-size: 30px;
 }
 
 .servicios {
     grid-area: servicios;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
-    justify-content: space-around;
+    justify-content: center;
+
 }
 
 .servicios_menu {
     display: flex;
-    font-size: 50px;
-    border: #fff;
-    padding: 1rem;
+    list-style: none;
     justify-content: space-around;
-    flex-direction: row;
-    margin-bottom: 20px;
-    align-content: center;
+    padding: 1rem;
+    margin: 20px;
 }
 
 .servicios_link {
+    text-decoration: none;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
     padding: 1rem;
-    align-items: center;
-    background-color: rgb(190, 71, 71);
-    margin-left: 80px;
-}
-
-.servicios_img {
-    display: flex;
-    justify-content: center;
-    gap: 15rem;
-    width: 600px;
-    margin: auto;
-    padding-left: 140px;
-}
-
-/*-fin Contenido-----*/
-
-/*-----Footer-----*/
-
-footer {
-    display: flex;
     background-color: grey;
-    padding: 0.5rem;
-    margin: auto;
-    gap: 2rem;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-left: 10px;
 }
 
-.footer_menu {
+.servicios_imagenes {
     display: flex;
-    padding: 20px;
-    font-size: 25px;
     justify-content: space-around;
-    gap: 2rem;
 }
 
-legend {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
-    color: rgb(255, 254, 254);
-    text-align: center;
+.servicios img {
+    width: 25%;
+    height: 60%;
 }
 
-.footer_form {
-    display: flex;
-    flex-direction: column;
+/* Vista mobile MAIN INDEX */
 
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 700px;
-    align-items: center;
-
-}
-
-input {
-    background-color: rgb(190, 71, 71);
-    border: solid 1px rgb(190, 71, 71);
-    color: #fff;
-    width: 200px;
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-size: large;
-}
-
-textarea {
-    width: 100%;
-    padding: 12px 50px;
-    margin: 8px 0;
-    resize: none;
-    box-sizing: border-box;
-}
-
-/* CSS SERVICIOS HTML */
-
-.nuestros_servicios {
-    margin-top: 200px;
-    text-align: center;
-}
-
-.contenido_ns {
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.ns_subti {
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: grey;
-}
-
-.ns_texto {
-    font-size: 20px;
-    background-color: rgb(235, 235, 172);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 1rem;
-    border: solid 1px currentColor;
-}
-
-/* Vista mobile */
-
-@media only screen and (max-width: 767px) {
-
-    .container {
-        grid-template-rows: 10% 20% 40% 30%;
-        grid-template-columns: 15% 35% 50%;
-        height: auto;
+@media only screen and (max-width:767px) {
+    .contenido h2 {
+        font-size: 40px;
+        padding: 1rem;
     }
 
-    .header {
-        height: auto;
-    }
-
-    header {
-        grid-column: 10% 90%;
-    }
-
-    h1 {
-        font-size: small;
-        margin-left: 1px;
-        margin-bottom: 2px;
-    }
-
-    .header__logo {
-        width: 60px;
-        margin-top: 10px;
-        margin-left: 1px;
-    }
-
-    .header_menu {
-        font-size: 6px;
-        gap: 1rem;
-        padding: 0.5rem;
-    }
-
-    .header_abajo {
-        font-size: 6px;
-        padding-left: 5px;
-    }
-
-    .contenido {
-        padding: 0;
-        margin: auto;
-    }
-
-    h2 {
-        font-size: 50px;
-    }
-
-    h3 {
-        font-size: 20px;
-
-    }
-
-    .servicios {
-        height: auto;
-        margin-top: 20px;
-    }
-
-    .servicios_menu {
+    .contenido h3 {
         font-size: 15px;
-        padding: 0;
-        text-align: center;
+    }
+
+    .mainindex {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px auto;
+        grid-template-areas:
+            "contenido"
+            "servicios";
+        justify-items: center;
     }
 
     .servicios_link {
+        font-size: small;
         padding: 1rem;
         margin-left: 10px;
     }
+}
 
-    img {
-        height: auto;
+
+/* Vista tablet INDEX */
+
+@media only screen and (min-width:768px) and (max-width:1239px) {
+    .contenido h2 {
+        font-size: 60px;
+        padding: 1rem;
     }
 
-    .servicios_img {
-        gap: 1.5rem;
-        width: 40%;
-        padding: 0;
-    }
-
-    .footer {
-        width: auto;
-    }
-
-    footer {
-        flex-direction: column;
-        padding: 0;
-        margin-left: 1px;
-        height: auto;
-    }
-
-    .footer_menu {
-        font-size: xx-small;
-        padding: 0;
-        gap: 0.5rem;
-    }
-
-    fieldset {
-        width: auto;
-        height: auto;
-    }
-
-    legend {
-        font-size: xx-small;
-    }
-
-    input {
-        width: auto;
-        font-size: xx-small;
-    }
-
-    textarea {
-        width: auto;
-        height: auto;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer__arriba {
-        font-size: xx-small;
-    }
-
-    /* vista mobile servicios html  */
-
-    .nuestros_servicios {
-        margin-top: 50px;
-        font-size: 20px;
-        height: auto;
-    }
-
-    .contenido_ns {
-        gap: 0.5rem;
-
-    }
-
-    .ns_subti {
-        font-size: 15px;
-    }
-
-    .ns_texto {
-        font-size: 5px;
-        width: 70%;
-        padding: 0.5rem;
-        margin: 5px;
-        margin-right: 1px;
-    }
-
-    /* vista mobile sobrenosotros html */
-    .sn {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sn_titulo {
+    .contenido h3 {
         font-size: 30px;
-        margin-top: 50px;
+    }
+
+    .mainindex {
+        grid-template-rows: 180px auto;
+
+    }
+
+    .servicios_link {
+        font-size: large;
+        padding: 1rem;
+        margin-left: 10px;
+    }
+}
+
+/* Vista desktop INDEX */
+
+@media only screen and (min-width:1240px) {
+    .contenido h2 {
+        font-size: 80px;
+        padding: 1rem;
+    }
+
+    .contenido h3 {
+        font-size: 50px;
+    }
+
+    .mainindex {
+        grid-template-rows: 250px auto;
+
+    }
+
+    .servicios_link {
+        font-size: 40px;
+        padding: 1rem;
+        margin-left: 10px;
+    }
+}
+
+/* MAIN SERVICIOS HTML*/
+
+.ns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "titulo titulo"
+        "subti1 texto1"
+        "subti2 texto2"
+        "subti3 texto3";
+    border: 1px solid #fff;
+    align-items: center;
+}
+
+.ns_tit {
+    grid-area: titulo;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    font-size: 70px;
+    padding: 1rem;
+}
+
+.ns_subti1 {
+    grid-area: subti1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: right;
+    font-size: 30px;
+}
+
+.ns_subti2 {
+    grid-area: subti2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: right;
+    font-size: 30px;
+}
+
+.ns_subti3 {
+    grid-area: subti3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: right;
+    font-size: 30px;
+}
+
+.ns_texto1 {
+    grid-area: texto1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    padding: 1rem;
+    margin-right: 80px;
+}
+
+.ns_texto2 {
+    grid-area: texto2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    padding: 1rem;
+    margin-right: 80px;
+}
+
+.ns_texto3 {
+    grid-area: texto3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    padding: 1rem;
+    margin-right: 80px;
+}
+
+/* Vista mobile SERVICIOS */
+@media only screen and (max-width:767px) {
+    .ns {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulo"
+            "subti1"
+            "texto1"
+            "subti2"
+            "texto2"
+            "subti3"
+            "texto3";
+        justify-content: center;
+    }
+
+    .ns_tit {
+        font-size: 35px;
+        padding: 1rem;
+    }
+
+    .ns_subti1 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .ns_subti2 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .ns_subti3 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .ns_texto1 {
+        font-size: 10px;
+        margin-right: 10px;
+
+    }
+
+    .ns_texto2 {
+        font-size: 10px;
+        margin-right: 10px;
+
+    }
+
+    .ns_texto3 {
+        font-size: 10px;
+        margin-right: 10px;
+
+    }
+}
+
+/* Vista tablet SERVICIOS */
+@media only screen and (min-width:768px) and (max-width:1239px) {
+    .ns_tit {
+        font-size: 50px;
+        padding: 1rem;
+    }
+
+    .ns_subti1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .ns_subti2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .ns_subti3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .ns_texto1 {
+        font-size: 15px;
+        margin-right: 10px;
+
+    }
+
+    .ns_texto2 {
+        font-size: 15px;
+        margin-right: 10px;
+
+    }
+
+    .ns_texto3 {
+        font-size: 15px;
+        margin-right: 10px;
+
+    }
+}
+
+/* Vista desktop SERVICIOS */
+@media only screen and (min-width:1240px) {
+    .ns_tit {
+        font-size: 60px;
+        padding: 1rem;
+    }
+
+    .ns_subti1 {
+        font-size: 35px;
+        text-align: right;
+    }
+
+    .ns_subti2 {
+        font-size: 35px;
+        text-align: right;
+    }
+
+    .ns_subti3 {
+        font-size: 35px;
+        text-align: right;
+    }
+
+    .ns_texto1 {
+        font-size: 20px;
+        margin-right: 30px;
+
+    }
+
+    .ns_texto2 {
+        font-size: 20px;
+        margin-right: 30px;
+
+    }
+
+    .ns_texto3 {
+        font-size: 20px;
+        margin-right: 30px;
+
+    }
+}
+
+/* MAIN SOBRENOSOTROS HTML */
+
+.sn_titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    font-size: 70px;
+    padding: 1rem;
+}
+
+.sn_texto {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    padding: 1rem;
+    margin-right: 0 30px 0 30px;
+}
+
+/* Vista mobile SOBRENOSOTROS */
+@media only screen and (max-width:767px) {
+    .sn_titulo {
+        font-size: 35px;
+        padding: 1rem;
     }
 
     .sn_texto {
-        width: 90%;
-        padding: 0.5rem;
-        margin: 5px;
-        margin-right: 1px;
-        text-align: justify;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px;
     }
-
-    /* vista mobile informacionutil html */
-    /* vista mobile contacto html */
 }
 
-/* Vista Tablet */
-
-@media only screen and (min-width:768px) and (max-width:1023px) {
-
-    .container {
-        grid-template-rows: 15% 20% 35% 30%;
-        grid-template-columns: 15% 35% 50%;
-        height: auto;
-    }
-
-    .header {
-        height: auto;
-    }
-
-    h1 {
-        font-size: 50px;
-    }
-
-    .header__logo {
-        width: 90px;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-
-    .header_menu {
-        font-size: medium;
-        gap: 1rem;
-        padding: 0.5rem;
-    }
-
-    .header_abajo {
-        font-size: 10px;
-        padding-left: 5px;
-    }
-
-    .contenido {
-        padding: 0;
-    }
-
-    h2 {
-        font-size: 60px;
-        margin-top: 60px;
-    }
-
-    h3 {
-        font-size: 25px;
-    }
-
-    .servicios {
-        height: auto;
-        margin-top: 40px;
-    }
-
-    .servicios_menu {
-        font-size: 20px;
-        padding: 0;
-        text-align: center;
-
-    }
-
-    .servicios_link {
-        padding: 1rem;
-        margin-left: 10px;
-    }
-
-    .servicios_img {
-        gap: 2rem;
-        width: 20%;
-        padding: 0;
-    }
-
-    img {
-        height: auto;
-    }
-
-    .footer {
-        width: 100%;
-
-    }
-
-    footer {
-        padding: 0;
-        flex-direction: row;
-        height: auto;
-    }
-
-    .footer_menu {
-        font-size: small;
-        padding: 0;
-    }
-
-    fieldset {
-        width: auto;
-        height: auto;
-    }
-
-    legend {
-        font-size: small;
-    }
-
-    input {
-        width: auto;
-        font-size: x-small;
-    }
-
-    textarea {
-        width: auto;
-        height: auto;
-        padding: 0;
-    }
-
-    .footer__arriba {
-        font-size: small;
-    }
-
-    /* vista tablet servicios html */
-
-    .contenido_ns {
-        gap: 0.5rem;
-        margin-top: 50px;
-    }
-
-    .nuestros_servicios {
-        font-size: 30px;
-    }
-
-    .ns_subti {
-        font-size: 15px;
-    }
-
-    .ns_texto {
-        font-size: 5px;
-        width: 90%;
-        padding: 0.5rem;
-        margin-right: 1px;
-    }
-
-    /* vista tablet sobrenosotros html */
-
-    .sn {
-        margin-top: 120px;
-    }
-
+/* Vista tablet SOBRENOSOTROS */
+@media only screen and (min-width:768px) and (max-width:1239px) {
     .sn_titulo {
         font-size: 50px;
     }
 
-    .ns_texto {
-        font-size: 50px;
+    .sn_texto {
+        font-size: 15px;
     }
-
-    /* vista tablet informacionutil html */
-    /* vista tablet contacto html */
 }
 
-/* Vista desktop */
-
-@media only screen and (min-width:1024px) and (max-width:1200px) {
-
-    .container {
-        grid-template-rows: 15% 20% 45% 20%;
-        grid-template-columns: 1fr 1fr 1fr;
-        height: auto;
-        width: auto;
-    }
-
-    header {
-        width: auto;
-    }
-
-    .header {
-        height: auto;
-    }
-
-    h1 {
-        font-size: xx-large;
-    }
-
-    .header__logo {
-        width: 100px;
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-bottom: 10px;
-        margin-right: 110px;
-    }
-
-    .header_menu {
-        font-size: medium;
-        gap: 1rem;
-        padding: 0.5rem;
-    }
-
-    .header_abajo {
-        font-size: 10px;
-        padding-left: 5px;
-    }
-
-    .contenido {
-        padding: 0;
-        margin: 0;
-    }
-
-    h2 {
+/* Vista desktop SOBRENOSOTROS */
+@media only screen and (min-width:1240px) {
+    .sn_titulo {
         font-size: 60px;
     }
 
-    h3 {
+    .sn_texto {
+        font-size: 30px;
+    }
+}
+
+/* MAIN INFORMACIONUTIL HTML */
+
+.infoutil_tit {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    font-size: 70px;
+    padding: 1rem;
+}
+
+.contenedor_infoutil {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.info_anses {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    font-size: 70px;
+    border: 2px solid;
+    padding: 1rem;
+}
+
+/* Vista mobile INFOUTIL */
+@media only screen and (max-width:767px) {
+    .infoutil_tit {
+        font-size: 35px;
+        padding: 1rem;
+    }
+
+    .info_anses {
+        font-size: 30px;
+    }
+
+    .contenedor_infoutil {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    iframe {
+        width: 80%;
+    }
+
+}
+
+/* Vista tablet INFOUTIL */
+@media only screen and (min-width:768px) and (max-width:1239px) {
+    .infoutil_tit {
+        font-size: 50px;
+    }
+
+    .info_anses {
+        font-size: 40px;
+    }
+}
+
+/* Vista desktop INFOUTIL */
+@media only screen and (min-width:1240px) {
+    .infoutil_tit {
+        font-size: 60px;
+    }
+
+    .info_anses {
+        font-size: 50px;
+    }
+
+}
+
+
+/* MAIN CONTACTO HTML */
+
+.contacto_tit {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    font-size: 70px;
+    padding: 1rem;
+}
+
+.contacto_legend {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    font-size: 30px;
+}
+
+.contacto_form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(92, 92, 92);
+    text-align: left;
+    font-size: 20px;
+    padding: 2rem;
+}
+
+.contacto_form input {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.contacto_form textarea {
+    width: 100%;
+    padding: 1rem;
+}
+
+.contacto_label {
+    margin: 10px 0 10px 0;
+}
+
+/* Vista mobile CONTACTO */
+@media only screen and (max-width:767px) {
+    .contacto_tit {
+        font-size: 35px;
+    }
+
+    .contacto_legend {
+        font-size: 15px;
+    }
+
+    .contacto_form {
+        font-size: 12px;
+        padding: 1rem;
+    }
+}
+
+/* Vista tablet CONTACTO */
+@media only screen and (min-width:768px) and (max-width:1239px) {
+    .contacto_tit {
+        font-size: 50px;
+    }
+
+    .contacto_legend {
         font-size: 25px;
     }
 
-    .servicios {
-        height: auto;
-        margin-top: 0;
+    .contacto_form {
+        font-size: 18px;
+        padding: 1rem;
+    }
+}
+
+/* Vista desktop CONTACTO */
+@media only screen and (min-width:1240px) {
+    .contacto_tit {
+        font-size: 60px;
     }
 
-    .servicios_menu {
-        font-size: 20px;
-        padding: 0;
-        text-align: center;
-        margin-top: 20px;
-
+    .contacto_legend {
+        font-size: 35px;
     }
 
-    .servicios_link {
-        padding: 0.5rem;
-        margin-left: 20px;
-    }
-
-    .servicios_img {
-        gap: 2rem;
-        width: 20%;
-        padding: 0;
-
-    }
-
-    img {
-        height: auto;
-    }
-
-    .footer {
-        height: auto;
-        width: auto;
-
-    }
-
-    footer {
-        padding: 0;
-        flex-direction: row;
-    }
-
-    .footer_menu {
-        font-size: small;
-        padding: 0;
-    }
-
-    fieldset {
-        width: auto;
-        height: auto;
-    }
-
-    legend {
-        font-size: small;
-    }
-
-    input {
-        width: auto;
-        font-size: x-small;
-        padding: 1px;
-    }
-
-    textarea {
-        width: auto;
-        height: auto;
-        padding: 0;
-    }
-
-    .footer__arriba {
-        font-size: small;
-    }
-
-    /* Vista desktop servicios html */
-
-    .contenido_ns {
-        gap: 0.5rem;
-    }
-
-    .nuestros_servicios {
-        font-size: 40px;
-    }
-
-    .ns_subti {
-        font-size: 20px;
-    }
-
-    .ns_texto {
-        font-size: 12px;
-        width: 100%;
-        padding: 0.5rem;
-        margin-right: 1px;
+    .contacto_form {
+        font-size: 22px;
+        padding: 1rem;
     }
 }

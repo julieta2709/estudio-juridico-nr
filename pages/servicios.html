@@ -12,66 +12,63 @@
 
 <body>
     <!--FILA DE LOGO + NAV-->
-    <div class="container">
-        <div class="header">
-            <header>
-                <img class="header__logo" src="../assets/img/logonr.png" alt="logonr">
-
-                <nav class="header_navbar">
-                    <ul class="header_menu">
-                        <li> <a href="../index.html">Inicio</a></li>
-                        <li><a href="./servicios.html">Servicios</a></li>
-                        <li> <a href="./sobrenosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
-                        <li><a href="./informacionutil.html">Información útil</a></li>
-                    </ul>
-                </nav>
-                <H1>
-                    ESTUDIO JURÍDICO PREVISIONAL
-                </H1>
-                <p><a href="#abajo" class="header_abajo">Ir abajo</a></p>
-            </header>
+    <header>
+        <img class="header_logo" src="../assets/img/logonr.png" alt="logonr">
+        <div class="contenedor_header">
+            <nav class="header_navbar">
+                <ul class="header_menu">
+                    <li> <a class="header_menuli" href="../index.html">Inicio</a></li>
+                    <li> <a class="header_menuli" href="../pages/servicios.html">Servicios</a></li>
+                    <li> <a class="header_menuli" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li> <a class="header_menuli" href="../pages/contacto.html">Contacto</a></li>
+                    <li> <a class="header_menuli" href="../pages/informacionutil.html">Información útil</a></li>
+                </ul>
+            </nav>
+            <H1>ESTUDIO JURÍDICO PREVISIONAL</H1>
+            <p><a href="#abajo" class="header_abajo">Ir abajo</a></p>
         </div>
+    </header>
 
-        <!--INFORMACIÓN DE MI SITIO-->
-        <section class="contenido">
-            <article class="contenido_ns">
-                <H2 class="nuestros_servicios">Nuestros Servicios</H2>
-                <h3 class="ns_subti">Derecho previsional</h3>
-                <p class="ns_texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et delectus modi odio laborum excepturi maxime non dolor at tenetur ratione possimus ab deleniti sequi, ullam, quasi dolores quidem pariatur!</p>
-                <h3 class="ns_subti">Derecho laboral</h3>
-                <p class="ns_texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio, neque aut quas cupiditate, iure recusandae sint eaque veritatis exercitationem ullam iste nisi ab assumenda accusantium odit iusto vel reprehenderit.</p>
-                <h3 class="ns_subti">Derecho de familia</h3>
-                <p class="ns_texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis ipsa hic aut ipsum similique consectetur quaerat nam laboriosam? Minus, earum doloribus quis esse omnis numquam sapiente natus sunt commodi.</p>
+    <!--INFORMACIÓN DE MI SITIO-->
+    <main class="ns">
+        <H2 class="ns_tit">Nuestros Servicios</H2>
+        <h3 class="ns_subti1">Derecho previsional</h3>
+        <p class="ns_texto1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et delectus modi odio
+            laborum excepturi maxime non dolor at tenetur ratione possimus ab deleniti sequi, ullam, quasi dolores
+            quidem pariatur!</p>
+        <h3 class="ns_subti2">Derecho laboral</h3>
+        <p class="ns_texto2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio, neque aut quas
+            cupiditate, iure recusandae sint eaque veritatis exercitationem ullam iste nisi ab assumenda accusantium
+            odit iusto vel reprehenderit.</p>
+        <h3 class="ns_subti3">Derecho de familia</h3>
+        <p class="ns_texto3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis ipsa hic aut
+            ipsum similique consectetur quaerat nam laboriosam? Minus, earum doloribus quis esse omnis numquam
+            sapiente natus sunt commodi.</p>
 
-            </article>
-        </section>
-        <!--INICIO DE FOOTER-->
-        <div class="footer">
-            <footer>
-                <nav class="footer_navbar">
-                    <ul class="footer_menu">
-                        <li> <a href="../index.html">Inicio</a></li>
-                        <li><a href="./servicios.html">Servicios</a></li>
-                        <li> <a href="./sobrenosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
-                        <li><a href="./informacionutil.html">Información útil</a></li>
-                    </ul>
-                </nav>
-                <div class="footer_form">
-                    <form action="">
-                        <fieldset>
-                            <legend>Consultas</legend>
-                            <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
-                            <input type="submit" value="Enviá el formulario">
-                        </fieldset>
-                    </form>
-                </div>
+    </main>
 
-                <p class="footer__arriba"><a href="#arriba">Ir arriba</a></p>
-            </footer>
+    <!--INICIO DE FOOTER-->
+    <footer>
+        <nav class="footer_navbar">
+            <ul class="footer_menu">
+                <li> <a class="footer_menuli" href="../index.html">Inicio</a></li>
+                <li> <a class="footer_menuli" href="../pages/servicios.html">Servicios</a></li>
+                <li> <a class="footer_menuli" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                <li> <a class="footer_menuli" href="../pages/contacto.html">Contacto</a></li>
+                <li> <a class="footer_menuli" href="../pages/informacionutil.html">Información útil</a></li>
+            </ul>
+        </nav>
+        <div class="footer_form">
+            <form action="">
+                <fieldset class="footer_fieldset">
+                    <legend>Consultas</legend>
+                    <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
+                    <input type="submit" value="Enviá el formulario">
+                </fieldset>
+            </form>
+            <p> <a class="footer_arriba" href="#arriba">Ir arriba</a></p>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>

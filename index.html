@@ -12,29 +12,25 @@
 
 <body>
     <!--FILA DE LOGO + NAV-->
-    <div class="container">
-        <div class="header">
-            <header>
-                <img class="header__logo" src="./assets/img/logonr.png" alt="logonr">
-
-                <nav class="header_navbar">
-                    <ul class="header_menu">
-                        <li> <a href="index.html">Inicio</a></li>
-                        <li><a href="./pages/servicios.html">Servicios</a></li>
-                        <li> <a href="./pages/sobrenosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                        <li><a href="./pages/informacionutil.html">Información útil</a></li>
-                    </ul>
-                </nav>
-                <H1>
-                    ESTUDIO JURÍDICO PREVISIONAL
-                </H1>
-                <p><a href="#abajo" class="header_abajo">Ir abajo</a></p>
-            </header>
+    <header>
+        <img class="header_logo" src="./assets/img/logonr.png" alt="logonr">
+        <div class="contenedor_header">
+            <nav class="header_navbar">
+                <ul class="header_menu">
+                    <li> <a class="header_menuli" href="index.html">Inicio</a></li>
+                    <li> <a class="header_menuli" href="./pages/servicios.html">Servicios</a></li>
+                    <li> <a class="header_menuli" href="./pages/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li> <a class="header_menuli" href="./pages/contacto.html">Contacto</a></li>
+                    <li> <a class="header_menuli" href="./pages/informacionutil.html">Información útil</a></li>
+                </ul>
+            </nav>
+            <H1>ESTUDIO JURÍDICO PREVISIONAL</H1>
+            <p><a href="#abajo" class="header_abajo">Ir abajo</a></p>
         </div>
+    </header>
 
-        <!--CONTENIDO-->
-
+    <!--CONTENIDO-->
+    <main class="mainindex">
         <div class="contenido">
             <h2 class="NR">Natalia Reggi</h2>
             <h3 class="NR_subti">Asesoramiento y representación jurídica</h3>
@@ -42,45 +38,41 @@
         </div>
         <div class="servicios">
             <ul class="servicios_menu">
-                <li>
-                    <a class="servicios_link" href="./pages/sobrenosotros.html">¿Quiere jubilarse?</a>
-                    <a class="servicios_link" href="./pages/sobrenosotros.html">¿Quiere pensionarse?</a>
-                </li>
+                <li> <a class="servicios_link" href="./pages/sobrenosotros.html">¿Quiere jubilarse?</a> </li>
+                <li> <a class="servicios_link" href="./pages/sobrenosotros.html">¿Quiere pensionarse?</a> </li>
             </ul>
-            <picture class="servicios_img">
+            <div class="servicios_imagenes">
                 <img src="./assets/img/christian-bowen-TOKVE7PNwAc-unsplash.jpg" alt="quiere jubilarse" width="600"
                     height="400">
                 <img src="./assets/img/esther-ann-glpYh1cWf0o-unsplash.jpg" alt="quiere pensionarse" width="600"
                     height="400">
-            </picture>
+            </div>
         </div>
+    </main>
 
-        <!--INICIO DE FOOTER-->
-        <div class="footer">
-            <footer>
-                <nav class="footer_navbar">
-                    <ul class="footer_menu">
-                        <li> <a href="index.html">Inicio</a></li>
-                        <li><a href="./pages/servicios.html">Servicios</a></li>
-                        <li> <a href="./pages/sobrenosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                        <li><a href="./pages/informacionutil.html">Información útil</a></li>
-                    </ul>
-                </nav>
-                <div class="footer_form">
-                    <form action="">
-                        <fieldset>
-                            <legend>Consultas</legend>
-                            <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
-                            <input type="submit" value="Enviá el formulario">
-                        </fieldset>
-                    </form>
-                </div>
-
-                <p class="footer__arriba"><a href="#arriba">Ir arriba</a></p>
-            </footer>
+    <!--INICIO DE FOOTER-->
+    <footer>
+        <nav class="footer_navbar">
+            <ul class="footer_menu">
+                <li> <a class="footer_menuli" href="index.html">Inicio</a></li>
+                <li> <a class="footer_menuli" href="./pages/servicios.html">Servicios</a></li>
+                <li> <a class="footer_menuli" href="./pages/sobrenosotros.html">Sobre nosotros</a></li>
+                <li> <a class="footer_menuli" href="./pages/contacto.html">Contacto</a></li>
+                <li> <a class="footer_menuli" href="./pages/informacionutil.html">Información útil</a></li>
+            </ul>
+        </nav>
+        <div class="footer_form">
+            <form action="">
+                <fieldset class="footer_fieldset">
+                    <legend>Consultas</legend>
+                    <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
+                    <input type="submit" value="Enviá el formulario">
+                </fieldset>
+            </form>
+            <p> <a class="footer_arriba" href="#arriba">Ir arriba</a></p>
         </div>
-    </div>
+    </footer>
+
 </body>
 
 </html>

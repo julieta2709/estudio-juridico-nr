@@ -12,86 +12,71 @@
 
 <body>
     <!--FILA DE LOGO + NAV-->
-    <div class="container">
-    <div class="header">
-        <header>
-            <img class="header__logo" src="../assets/img/logonr.png" alt="logonr">
-
+    <header>
+        <img class="header_logo" src="../assets/img/logonr.png" alt="logonr">
+        <div class="contenedor_header">
             <nav class="header_navbar">
                 <ul class="header_menu">
-                    <li> <a href="../index.html">Inicio</a></li>
-                        <li><a href="./servicios.html">Servicios</a></li>
-                        <li> <a href="./sobrenosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
-                        <li><a href="./informacionutil.html">Información útil</a></li>
+                    <li> <a class="header_menuli" href="../index.html">Inicio</a></li>
+                    <li> <a class="header_menuli" href="../pages/servicios.html">Servicios</a></li>
+                    <li> <a class="header_menuli" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li> <a class="header_menuli" href="../pages/contacto.html">Contacto</a></li>
+                    <li> <a class="header_menuli" href="../pages/informacionutil.html">Información útil</a></li>
                 </ul>
             </nav>
-            <H1>
-                ESTUDIO JURÍDICO PREVISIONAL
-            </H1>
+            <H1>ESTUDIO JURÍDICO PREVISIONAL</H1>
             <p><a href="#abajo" class="header_abajo">Ir abajo</a></p>
-        </header>
-    </div>
+        </div>
+    </header>
 
     <!--INFORMACIÓN DE MI SITIO-->
-    <section class="contenido">
-        <H2>Contacto</H2>
-        <form action="">
-            <fieldset>
-                <legend>Datos personales</legend>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
-                <br>
-                <br>
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" required>
-            </fieldset>
-            <br>
-            <br>
-            <label for="correo">Correo electronico</label>
-            <input type="email" name="correo" id="correo" placeholder="Ingresa tu mail  " required>
-            <br>
-            <br>
-            <label for="num">Número</label>
-            <input type="number" name="num" id="num" placeholder="Ingresa tu numero  " required>
-            <br>
-            <br>
-            <label for="comentario">Comentario</label>
-            <br><br>
-            <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
-            <br><br>
-            <input type="submit" value="Enviá el formulario">
-            <input type="reset" value="Limpiar formulario">
-            <input type="button" value="">
+    <main class="contacto">
+        <H2 class="contacto_tit">Contacto</H2>
+        <div class="contacto_container">
+            <form class="contacto_form" action="">
+                <fieldset>
+                    <legend class="contacto_legend">Datos personales</legend>
+                    <label for="nombre">Nombre</label>
+                    <input class="contacto_label" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
+                        required>
+                    <label for="apellido">Apellido</label>
+                    <input class="contacto_label" type="text" name="apellido" id="apellido"
+                        placeholder="Ingresa tu apellido" required>
+                    <label for="correo">Correo electronico</label>
+                    <input class="contacto_label" type="email" name="correo" id="correo" placeholder="Ingresa tu mail  " required>
+                    <label for="num">Número</label>
+                    <input class="contacto_label" type="number" name="num" id="num" placeholder="Ingresa tu numero  " required>
+                </fieldset>
+                <label class="contacto_comentario" for="comentario">Comentario</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                <input class="contacto_label" type="submit" value="Enviá el formulario">
+                <input class="contacto_label" type="reset" value="Limpiar formulario">
+                <input type="button" value="">
 
-        </form>
-    </section>
+            </form>
+    </main>
     <!--INICIO DE FOOTER-->
-    <div class="footer">
-        <footer>
-            <nav class="footer_navbar">
-                <ul class="footer_menu">
-                    <li> <a href="../index.html">Inicio</a></li>
-                        <li><a href="./servicios.html">Servicios</a></li>
-                        <li> <a href="./sobrenosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
-                        <li><a href="./informacionutil.html">Información útil</a></li>
-                </ul>
-            </nav>
-            <div class="footer_form">
-                <form action="">
-                    <fieldset>
-                        <legend>Consultas</legend>
-                        <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
-                        <input type="submit" value="Enviá el formulario">
-                    </fieldset>
-                </form>
-            </div>
-
-            <p class="footer__arriba"><a href="#arriba">Ir arriba</a></p>
-        </footer>
-    </div>
-</div>
+    <footer>
+        <nav class="footer_navbar">
+            <ul class="footer_menu">
+                <li> <a class="footer_menuli" href="../index.html">Inicio</a></li>
+                <li> <a class="footer_menuli" href="../pages/servicios.html">Servicios</a></li>
+                <li> <a class="footer_menuli" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                <li> <a class="footer_menuli" href="../pages/contacto.html">Contacto</a></li>
+                <li> <a class="footer_menuli" href="../pages/informacionutil.html">Información útil</a></li>
+            </ul>
+        </nav>
+        <div class="footer_form">
+            <form action="">
+                <fieldset class="footer_fieldset">
+                    <legend>Consultas</legend>
+                    <textarea name="Consultas" id="Consultas" cols="30" rows="2"></textarea>
+                    <input type="submit" value="Enviá el formulario">
+                </fieldset>
+            </form>
+            <p> <a class="footer_arriba" href="#arriba">Ir arriba</a></p>
+        </div>
+    </footer>
 </body>
 
 </html>
